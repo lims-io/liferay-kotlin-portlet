@@ -1,16 +1,23 @@
-<%-- Taglibs --%>
-<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
-<%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
-<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
-<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%-- Inits --%>
+<%@ include file="init.jsp" %>
 
-<%-- Liferay Theme --%>
-<liferay-theme:defineObjects/>
+<%--@elvariable id="name" type="String"--%>
 
-<%-- Portlet --%>
-<portlet:defineObjects/>
+<c:if test="${not empty name}">
+    <div>
+        You are logged in as: ${name}
+    </div>
+</c:if>
 
-<c:forEach items="${cats}" var="cat">
-    <div>${cat}</div>
-</c:forEach>
+<div>
+    <c:forEach items="${cats}" var="cat">
+        <div>${cat.name}</div>
+    </c:forEach>
+</div>
+
+<aui:button-row>
+    <portlet:renderURL var="addCatURL">
+        <portlet:param name="mvcPath" value="/html/add-cat.jsp"/>
+    </portlet:renderURL>
+    <aui:button onClick="<%= addCatURL %>" value="Add Cat"/>
+</aui:button-row>

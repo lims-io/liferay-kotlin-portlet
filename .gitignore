@@ -1,6 +1,7 @@
 # build folders
 /out/
 /lib/
+docroot/WEB-INF/classes
 
 # ext properties
 /docroot/WEB-INF/src/portlet-ext.properties

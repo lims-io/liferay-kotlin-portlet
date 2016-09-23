@@ -1,6 +1,5 @@
-<%
 /**
- * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Lesser General Public License as published by the Free
@@ -12,10 +11,30 @@
  * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
  * details.
  */
-%>
 
-<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+package io.lims.kotlin.service.generated;
 
-<portlet:defineObjects />
+import com.liferay.portal.NoSuchModelException;
 
-This is the <b>Liferay Kotlin</b> portlet.
+/**
+ * @author Marcel Mika
+ */
+public class NoSuchCatException extends NoSuchModelException {
+
+	public NoSuchCatException() {
+		super();
+	}
+
+	public NoSuchCatException(String msg) {
+		super(msg);
+	}
+
+	public NoSuchCatException(String msg, Throwable cause) {
+		super(msg, cause);
+	}
+
+	public NoSuchCatException(Throwable cause) {
+		super(cause);
+	}
+
+}

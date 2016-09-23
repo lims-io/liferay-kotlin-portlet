@@ -17,10 +17,10 @@
     <!--  Parrots -->
     <!-- ////////////////////////////////////////////////////////////////////////////// -->
 
-    <entity name="Dogs" local-service="true" remote-service="false">
+    <entity name="Cat" local-service="true" remote-service="false">
 
         <!-- PK fields -->
-        <column name="dogId" type="long" primary="true"/>
+        <column name="catId" type="long" primary="true"/>
 
         <!-- Other fields -->
         <column name="name" type="String"/>

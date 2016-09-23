@@ -4,8 +4,7 @@ package io.lims.kotlin
 object Cats {
 
     // Holds list of cats names
-    val names: List<String>
-    get() {
-        return listOf("Bella", "Tigger", "Chloe")
+    val names: List<String> by lazy {
+        listOf("Bella", "Tigger", "Chloe")
     }
 }
